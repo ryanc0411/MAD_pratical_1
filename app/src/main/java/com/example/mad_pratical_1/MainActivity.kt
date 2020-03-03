@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val resultText: TextView = findViewById(R.id.result_text)
         val randomInt = (1..6).random()
-        resultText.text = randomInt.toString() + "\n\nDice Rolled!"
+        resultText.text = randomInt.toString()
         Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
 
 
@@ -33,15 +33,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun countUp(){
         val resultText: TextView = findViewById(R.id.result_text)
-        val number = resultText.text.toString().toInt();
+        var number = resultText.text.toString().toIntOrNull();
 
-        if (number >6){
-            resultText.text = resultText.text
+        if (number ==null){
+            resultText.text = "1"
         }
         else if (number < 6){
-            number+1;
+            number++
             resultText.text = number.toString()
         }
-        else resultText.text = "1"
     }
 }
