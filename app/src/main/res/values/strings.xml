@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MAD_pratical_1</string>
+    <string name="roll_label">Roll</string>
+    <string name="CountUp_label">CountUp</string>
 </resources>
